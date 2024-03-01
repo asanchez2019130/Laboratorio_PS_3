@@ -25,7 +25,7 @@ router.post(
         check("email").custom(existenteEmail),
         check("password").isLength({
             min: 6
-        }),
+        }), validarCampos
     ],
     createUser
 );
