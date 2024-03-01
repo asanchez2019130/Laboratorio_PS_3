@@ -7,11 +7,13 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: [true, "El nombre es obligotario"]
     },
-    username: {
-
+    userName: {
+        type: String,
+        required: [true, "El nombre es obligatorio"]
     },
-    lastname: {
-
+    lastName: {
+        type: String,
+        required: [true, "El apellido es obligatorio"]
     },
     email: {
         type: String,
@@ -27,3 +29,11 @@ const UserSchema = mongoose.Schema({
         default: true
     }
 })
+/*
+UserSchema.methods.toJSON = function () {
+    const { __v, ...user } = this.toObject();
+    user.uid = _id;
+    return user;
+  };*/
+
+export default mongoose.model('User', UserSchema);
