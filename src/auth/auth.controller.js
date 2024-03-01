@@ -3,10 +3,15 @@ import User from '../user/user.model.js';
 import { generarJWT } from '../helpers/generate-jwt.js';
 
 export const login = async (req, res) => {
-    const { email, password } = req.body;
+    const { emailOrUser, password } = req.body;
 
     try {
-        const user = await User.findOne({ email });
+        const user = await User.findOne({
+            $or: [
+                { email: emailOrUser },
+                { userName: emailOrUser }
+            ]
+        });
 
         if (!user) {
             return res.status(400).json({
@@ -14,7 +19,7 @@ export const login = async (req, res) => {
             })
         }
 
-        if (!user.estado) {
+        if (!user.state) {
             return res.status(400).json({
                 msg: "User does not exist in te dataBase"
             })
