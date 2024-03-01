@@ -35,20 +35,61 @@ export const createUser = async (req, res) => {
 
 export const updateUser = async (req, res = response) => {
     const { id } = req.params;
-    const { _id, password: newPassword, ...rest } = req.body;
+    const { _id, password: newPassword, oldPassword, ...rest } = req.body;
 
-    if (newPassword) {
-        const salt = bcryptjs.genSaltSync();
-        rest.password = bcryptjs.hashSync(newPassword, salt);
+    try {
+        const user = await User.findById(id);
+
+        if (!user) {
+            return res.status(404).json({
+                msg: "user not found"
+            });
+        }
+
+        if (oldPassword && newPassword) {
+            const validPassword = bcryptjs.compareSync(oldPassword, user.password)
+            if (!validPassword) {
+                return res.status(400).json({
+                    msg: "The old password is incorrect"
+                });
+            }
+        }
+
+        if (newPassword) {
+            const salt = bcryptjs.genSaltSync();
+            rest.password = bcryptjs.hashSync(newPassword, salt);
+        }
+
+
+        await User.findByIdAndUpdate(id, rest);
+
+        const useru = await User.findOne({ _id: id });
+
+        res.status(200).json({
+            msg: 'Update User',
+            useru
+        })
+
+    } catch (e) {
+        console.error(e);
+        res.status(500).json({
+            msg: "Error del server"
+        })
     }
 
-    await User.findByIdAndUpdate(id, rest);
-
-    const user = await User.findOne({ _id: id });
-
-    res.status(200).json({
-        msg: 'Update User',
-        user
-    })
+    /*
+        if (newPassword) {
+            const salt = bcryptjs.genSaltSync();
+            rest.password = bcryptjs.hashSync(newPassword, salt);
+        }
+    
+        await User.findByIdAndUpdate(id, rest);
+    
+        const user = await User.findOne({ _id: id });
+    
+        res.status(200).json({
+            msg: 'Update User',
+            user
+        })*/
 
 }
