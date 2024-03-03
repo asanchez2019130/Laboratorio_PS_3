@@ -13,9 +13,13 @@ const PublicationSchema = mongoose.Schema({
         type: String,
         required: [true, "Content is required"]
     },
-    id_User: {
+    creatorBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User' , required : true
+    },
+    state: {
+        type: Boolean,
+        default: true
     }
 });
 
