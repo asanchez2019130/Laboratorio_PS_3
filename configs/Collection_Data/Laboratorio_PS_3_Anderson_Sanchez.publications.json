@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "65e53eff3c7a92eae2470394"
+  },
+  "titule": "Despiden profesor de colegio Guatemalteco",
+  "category": "Academico",
+  "content": "Se busca profesor de matetica que tenga valores",
+  "creatorBy": {
+    "$oid": "65e53e573c7a92eae247038a"
+  },
+  "state": true,
+  "__v": 4,
+  "commentBy": [
+    {
+      "$oid": "65e53f413c7a92eae2470398"
+    },
+    {
+      "$oid": "65e540b03c7a92eae24703a8"
+    }
+  ]
+}]

@@ -1,10 +1,12 @@
 import { response, request } from "express";
 import Comment from './comment.model.js';
+import Publication from '../publication/publication.model.js';
+
 
 export const createComment = async (req, res) => {
     const { commentary, postBy } = req.body;
     const creatorBy = req.user.id;
-    
+
     try {
 
         const comment = new Comment({ commentary, postBy, creatorBy });
@@ -81,16 +83,25 @@ export const deleteComment = async (req, res) => {
     try {
         const comment = await Comment.findById(id);
 
+        if (!comment) {
+            return res.status(404).json({
+                msg: 'Comment not found'
+            });
+        }
+
         if (String(comment.creatorBy) !== req.user.id) {
             return res.status(403).json({
                 msg: 'There was an error deleting the commentary'
             })
         }
 
-        await Comment.findByIdAndUpdate(id, { state: false });
+        comment.state = false;
+        await comment.save();
+
+        await Publication.updateOne({ _id: comment.commentBy }, { $pull: { commentBy: id } })
 
         res.status(200).json({
-            msg: 'Publication eliminated', comment
+            msg: 'Comment eliminated', comment
         });
 
     } catch (error) {

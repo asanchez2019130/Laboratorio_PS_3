@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "65e53f413c7a92eae2470398"
+  },
+  "commentary": "En donde puedo mandar mi CV?",
+  "postBy": {
+    "$oid": "65e53eff3c7a92eae2470394"
+  },
+  "creatorBy": {
+    "$oid": "65e53e713c7a92eae247038e"
+  },
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e540b03c7a92eae24703a8"
+  },
+  "commentary": "De cuanto es el salario?",
+  "postBy": {
+    "$oid": "65e53eff3c7a92eae2470394"
+  },
+  "creatorBy": {
+    "$oid": "65e53e713c7a92eae247038e"
+  },
+  "state": true,
+  "__v": 0
+}]

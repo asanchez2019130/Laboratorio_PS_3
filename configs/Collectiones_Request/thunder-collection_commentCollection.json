@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "commentCollection",
-    "dateExported": "2024-03-04T01:42:59.732Z",
+    "dateExported": "2024-03-04T04:35:09.100Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-03-03T20:12:41.115Z",
-            "modified": "2024-03-04T00:39:58.099Z",
+            "modified": "2024-03-04T03:32:00.558Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk1MTI1ODksImV4cCI6MTcwOTUxNjE4OX0.cPrTWPryFIhi06qlhSij2yqRCB1uhiOrg3m8SgAYr6c"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1M2U3MTNjN2E5MmVhZTI0NzAzOGUiLCJpYXQiOjE3MDk1MjI3MDUsImV4cCI6MTcwOTUyNjMwNX0.QXI7cRFV1jZjdP0hBg8PxBm6_2EeZOd3jFiG_kzxlAA"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"commentary\": \"dd\",\n  \"postBy\": \"65e5183b3a1b41a96c5de807\",\n  \"creatorBy\": \"65e49daf11152c44c5ee46b9\"\n}",
+                "raw": "{\n  \"commentary\": \"De cuanto es el salario?\",\n  \"postBy\": \"65e53eff3c7a92eae2470394\",\n  \"creatorBy\": \"65e53e713c7a92eae247038e\"\n}",
                 "form": []
             },
             "tests": []
@@ -34,15 +34,15 @@
             "colId": "0df83e8c-476f-4eb9-a744-7d9e875e944a",
             "containerId": "",
             "name": "deleteComment",
-            "url": "http://localhost:3000/gestorDeOpiniones/v1/comment/65e5199632cc4716c02f08a6",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/comment/65e53f413c7a92eae2470398",
             "method": "DELETE",
             "sortNum": 30000,
             "created": "2024-03-04T00:45:54.781Z",
-            "modified": "2024-03-04T00:48:41.343Z",
+            "modified": "2024-03-04T03:53:29.264Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk1MTI1ODksImV4cCI6MTcwOTUxNjE4OX0.cPrTWPryFIhi06qlhSij2yqRCB1uhiOrg3m8SgAYr6c"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1M2U3MTNjN2E5MmVhZTI0NzAzOGUiLCJpYXQiOjE3MDk1MjQzOTgsImV4cCI6MTcwOTUyNzk5OH0.gMAXKfgV7n0LgDC35TzVC5N4AHs2yWfFLmwSjCx2IzU"
                 }
             ],
             "params": [],

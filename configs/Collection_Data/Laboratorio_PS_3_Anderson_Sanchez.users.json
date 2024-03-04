@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "65e53e573c7a92eae247038a"
+  },
+  "name": "Uriel",
+  "userName": "UrielSR",
+  "lastName": "Sanchez",
+  "email": "asanchez-2019130@kinal.edu.gt",
+  "password": "$2a$10$MJYhqPahKywcPv91n7SkNesVJpVFXMNH.eLJo9uIPrZeMzZprvi6W",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e53e713c7a92eae247038e"
+  },
+  "name": "Diego",
+  "userName": "DiegoSG",
+  "lastName": "Siney",
+  "email": "dsiney-2021664@kinal.edu.gt",
+  "password": "$2a$10$eWKlQrzCYN.kibYb7HVWr.LJv4.ZsdjoNDoWb6hVbgaH4rNOX5QmC",
+  "state": true,
+  "__v": 0
+}]

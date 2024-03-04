@@ -1,6 +1,6 @@
 import { response, request } from "express";
 import Publication from './publication.model.js';
-import User from './publication.model.js';
+
 
 
 //Create
@@ -34,13 +34,18 @@ export const getPublications = async (req = request, res = response) => {
     const { limite, desde } = req.query;
     const query = { state: true }
 
+
     const [total, publications] = await Promise.all([
         Publication.countDocuments(query),
         Publication.find(query)
             .skip(Number(desde))
             .limit(Number(limite))
             .populate('creatorBy', 'email')
-            .populate('commentBy', 'commentary')
+            .populate({
+                path: 'commentBy',
+                match: { state: true },
+                select: 'commentary'
+            })
     ]);
 
     res.status(200).json({
@@ -70,12 +75,18 @@ export const updatePublications = async (req, res = response) => {
             });
         }
 
-
-        publication.titule = titule;
-        publication.category = category;
-        publication.content = content;
-        publication.commentBy = commentBy;
-
+        if (titule) {
+            publication.titule = titule;
+        }
+        if (category) {
+            publication.category = category;
+        }
+        if (content) {
+            publication.content = content;
+        }
+        if (commentBy) {
+            publication.commentBy.push(commentBy);
+        }
 
         await publication.save();
 
@@ -91,6 +102,7 @@ export const updatePublications = async (req, res = response) => {
         });
     }
 };
+
 /*
 await Publication.findByIdAndUpdate(id, rest);
 
@@ -109,8 +121,6 @@ export const deletePublication = async (req, res) => {
     try {
 
         const publication = await Publication.findById(id);
-
-
 
         if (String(publication.creatorBy) !== req.user.id) {
             return res.status(403).json({

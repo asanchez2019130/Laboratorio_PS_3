@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "publicationCollection",
-    "dateExported": "2024-03-04T01:43:11.380Z",
+    "dateExported": "2024-03-04T04:35:05.005Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -28,17 +28,17 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-03-02T07:16:51.528Z",
-            "modified": "2024-03-04T00:39:23.062Z",
+            "modified": "2024-03-04T03:24:47.511Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk1MTI1ODksImV4cCI6MTcwOTUxNjE4OX0.cPrTWPryFIhi06qlhSij2yqRCB1uhiOrg3m8SgAYr6c"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1M2U1NzNjN2E5MmVhZTI0NzAzOGEiLCJpYXQiOjE3MDk1MjI2NzIsImV4cCI6MTcwOTUyNjI3Mn0.98ecdZqh1Kp5XPGx4gvHwglu3P2g7ZHqGd4TKissUUU"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"titule\" : \"Titulo 1\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 1\",\n  \"id_User\" : \"65e49daf11152c44c5ee46b9\"\n}",
+                "raw": "{\n  \"titule\" : \"Despiden profesor de colegio Guatemalteco\",\n  \"category\" : \"Academico\",\n  \"content\" : \"Se busca profesor de matetica que tenga valores\",\n  \"id_User\" : \"65e53e573c7a92eae247038a\"\n}",
                 "form": []
             },
             "tests": []
@@ -71,7 +71,7 @@
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-03-02T07:25:57.392Z",
-            "modified": "2024-03-03T17:13:11.482Z",
+            "modified": "2024-03-04T02:40:38.028Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -81,7 +81,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"titule\" : \"Titulo 3\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 2\"\n}",
+                "raw": "{\n  \"titule\" : \"Titulo 3\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 2\",\n  \"id_User\" : \"65e52ab080b2f56f4e14feae\"\n}",
                 "form": []
             },
             "tests": []
@@ -91,21 +91,21 @@
             "colId": "c75deb60-ce0c-4b7a-b45b-3d582aa20cca",
             "containerId": "",
             "name": "commentPost",
-            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication/65e5183b3a1b41a96c5de807",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication/65e53eff3c7a92eae2470394",
             "method": "PUT",
             "sortNum": 50000,
             "created": "2024-03-04T01:13:14.516Z",
-            "modified": "2024-03-04T01:18:29.199Z",
+            "modified": "2024-03-04T03:43:01.457Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk1MTQ4MjMsImV4cCI6MTcwOTUxODQyM30.vBgedJnbABQ0_1aDS4VKqdJqy2FJNT3NKigBpYhO6Zo"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1M2U1NzNjN2E5MmVhZTI0NzAzOGEiLCJpYXQiOjE3MDk1MjI3NjcsImV4cCI6MTcwOTUyNjM2N30.qtsExdZy8Wt6ySSl9HpzXpEaHhIGmRsEJPWqSJYn-jU"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"titule\" : \"Titulo 3\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 2\",\n  \"commentBy\": \"65e51ab232cc4716c02f08c8\"\n}",
+                "raw": "{\n  \"commentBy\": \"65e540b03c7a92eae24703a8\"\n}",
                 "form": []
             },
             "tests": []

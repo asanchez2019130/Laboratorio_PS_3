@@ -5,7 +5,7 @@ import {
     createPublication,
     deletePublication,
     getPublications,
-    updatePublications
+    updatePublications,
 } from '../publication/publication.controller.js'
 
 import {
@@ -27,7 +27,7 @@ router.post(
         check("content", "requerid"),
         check("id_User", "requerid"),
         validarCampos
-    ], 
+    ],
     validarJWT,
     createPublication
 )
@@ -37,6 +37,7 @@ router.put(
     validarJWT,
     updatePublications
 )
+
 
 router.delete(
     "/:id",
