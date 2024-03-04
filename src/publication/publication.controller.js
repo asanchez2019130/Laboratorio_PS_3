@@ -21,7 +21,7 @@ export const createPublication = async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({
-            msg : 'Internal server error'
+            msg: 'Internal server error'
         })
     }
 
@@ -54,32 +54,30 @@ export const updatePublications = async (req, res = response) => {
     const { titule, category, content } = req.body;
 
     try {
-        // Verificar si la publicación existe
         const publication = await Publication.findById(id);
 
         if (!publication) {
             return res.status(404).json({
-                msg: 'Publicación no encontrada'
+                msg: 'Post not found'
             });
         }
 
-        // Verificar si el usuario autenticado tiene permiso para editar la publicación
         if (String(publication.creatorBy) !== req.user.id) {
             return res.status(403).json({
-                msg: 'No tienes permiso para editar esta publicación'
+                msg: 'You do not have permission to edit this post'
             });
         }
 
-        // Actualizar los campos de la publicación
+
         publication.titule = titule;
         publication.category = category;
         publication.content = content;
 
-        // Guardar los cambios en la base de datos
+
         await publication.save();
 
         res.status(200).json({
-            msg: 'Publicación actualizada',
+            msg: 'Post update',
             publication
         });
 
@@ -104,7 +102,7 @@ res.status(200).json({
 
 export const deletePublication = async (req, res) => {
     const { id } = req.params;
-    
+
     try {
 
         const publication = await Publication.findById(id);

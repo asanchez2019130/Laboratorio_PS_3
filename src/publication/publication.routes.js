@@ -22,10 +22,10 @@ router.get("/", getPublications);
 router.post(
     "/",
     [
-        check("titule", ""),
-        check("category", ""),
-        check("content", ""),
-        check("id_User", ""),
+        check("titule", "requerid"),
+        check("category", "requerid"),
+        check("content", "requerid"),
+        check("id_User", "requerid"),
         validarCampos
     ], 
     validarJWT,
