@@ -39,6 +39,8 @@ export const getPublications = async (req = request, res = response) => {
         Publication.find(query)
             .skip(Number(desde))
             .limit(Number(limite))
+            .populate('creatorBy', 'email')
+            .populate('commentBy', 'commentary')
     ]);
 
     res.status(200).json({
@@ -51,7 +53,7 @@ export const getPublications = async (req = request, res = response) => {
 //Update
 export const updatePublications = async (req, res = response) => {
     const { id } = req.params;
-    const { titule, category, content } = req.body;
+    const { titule, category, content, commentBy } = req.body;
 
     try {
         const publication = await Publication.findById(id);
@@ -72,6 +74,7 @@ export const updatePublications = async (req, res = response) => {
         publication.titule = titule;
         publication.category = category;
         publication.content = content;
+        publication.commentBy = commentBy;
 
 
         await publication.save();

@@ -15,7 +15,11 @@ const PublicationSchema = mongoose.Schema({
     },
     creatorBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User' , required : true
+        ref: 'User', required: true
+    },
+    commentBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment', required: true
     },
     state: {
         type: Boolean,
