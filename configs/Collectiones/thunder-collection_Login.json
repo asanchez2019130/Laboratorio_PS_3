@@ -1,25 +1,25 @@
 {
     "client": "Thunder Client",
     "collectionName": "Login",
-    "dateExported": "2024-03-01T17:58:21.981Z",
+    "dateExported": "2024-03-04T01:43:24.846Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "d0072844-dd75-42cf-b6c4-44b7d680a3c4",
-            "colId": "70214c50-58b4-4c4f-be28-3f304a15187f",
+            "_id": "67055b46-c7fa-4e58-9fd0-e6541a5ad944",
+            "colId": "9d2f33e9-002e-4b9c-a0d3-9b1e52b10a88",
             "containerId": "",
             "name": "loginUser",
             "url": "http://localhost:3000/gestorDeOpiniones/v1/auth/login",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-01T14:12:53.274Z",
-            "modified": "2024-03-01T15:06:38.948Z",
+            "created": "2024-03-02T05:40:09.605Z",
+            "modified": "2024-03-04T00:49:01.894Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"emailOrUser\" : \"1@kinal.edu.gt\",\n  \"password\" : \"123456\"\n}",
+                "raw": "{\n  \"emailOrUser\" : \"1\",\n  \"password\" : \"123456\"\n}",
                 "form": []
             },
             "tests": []

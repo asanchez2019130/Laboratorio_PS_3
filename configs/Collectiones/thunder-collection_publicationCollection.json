@@ -1,0 +1,114 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "publicationCollection",
+    "dateExported": "2024-03-04T01:43:11.380Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bfcb752f-5551-49df-8667-ac2556d340d5",
+            "colId": "c75deb60-ce0c-4b7a-b45b-3d582aa20cca",
+            "containerId": "",
+            "name": "GetPublication",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-02T05:49:01.806Z",
+            "modified": "2024-03-02T07:16:15.457Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ff35c383-5281-4c64-b46e-af3b78c69302",
+            "colId": "c75deb60-ce0c-4b7a-b45b-3d582aa20cca",
+            "containerId": "",
+            "name": "createPublication",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-02T07:16:51.528Z",
+            "modified": "2024-03-04T00:39:23.062Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk1MTI1ODksImV4cCI6MTcwOTUxNjE4OX0.cPrTWPryFIhi06qlhSij2yqRCB1uhiOrg3m8SgAYr6c"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titule\" : \"Titulo 1\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 1\",\n  \"id_User\" : \"65e49daf11152c44c5ee46b9\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cc70a3ec-e985-471e-832d-bc5f638678c3",
+            "colId": "c75deb60-ce0c-4b7a-b45b-3d582aa20cca",
+            "containerId": "",
+            "name": "deletePublication",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication/65e4ad75ec6ccb71ec4bec57",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-02T07:22:46.481Z",
+            "modified": "2024-03-03T17:14:16.773Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk0ODYwNDgsImV4cCI6MTcwOTQ4OTY0OH0.CMFlDMnNZk7ibjRjUk-i46_3L1LwJJ0dHg3POFuphN0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "85250cff-22e9-4ad9-925f-b2fb9eedd938",
+            "colId": "c75deb60-ce0c-4b7a-b45b-3d582aa20cca",
+            "containerId": "",
+            "name": "updatePublication",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication/65e4ad75ec6ccb71ec4bec57",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-02T07:25:57.392Z",
+            "modified": "2024-03-03T17:13:11.482Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk0ODU5ODAsImV4cCI6MTcwOTQ4OTU4MH0.1UOW4Ji-tkmFRLyvs3Cc1tEvlkhJj4cpplg5AOazUts"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titule\" : \"Titulo 3\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f74f23cb-0b52-4b9b-9415-c211ca003308",
+            "colId": "c75deb60-ce0c-4b7a-b45b-3d582aa20cca",
+            "containerId": "",
+            "name": "commentPost",
+            "url": "http://localhost:3000/gestorDeOpiniones/v1/publication/65e5183b3a1b41a96c5de807",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-04T01:13:14.516Z",
+            "modified": "2024-03-04T01:18:29.199Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0OWRhZjExMTUyYzQ0YzVlZTQ2YjkiLCJpYXQiOjE3MDk1MTQ4MjMsImV4cCI6MTcwOTUxODQyM30.vBgedJnbABQ0_1aDS4VKqdJqy2FJNT3NKigBpYhO6Zo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titule\" : \"Titulo 3\",\n  \"category\" : \"Category 1\",\n  \"content\" : \"Cnontent 2\",\n  \"commentBy\": \"65e51ab232cc4716c02f08c8\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
